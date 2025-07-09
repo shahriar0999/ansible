@@ -7,3 +7,50 @@ Age:
   - 25
   - 26
   - 27
+
+employee:
+  name: john
+  gender: male
+  age: 24
+  address:
+    city: edison
+    state: new jersey
+    country: united states
+
+# list
+- apple
+- apple
+- apple
+- apple
+
+- name: apple
+  color: red
+  weight: 100g
+- name: orange
+  color: orange
+  weight: 90g
+- name: mango
+  color: yellow
+  weight: 150g
+
+employees:
+  - name: john
+    gender: male
+    age: 24
+  - name: sarah
+    gender: female
+    age: 26
+
+  gender: male
+  age: 24
+  address:
+    city: 'edison'
+    state: 'new jersey'
+    country: 'united states'
+  payslips:
+    - month: june
+      amount: 1400
+    - month: july
+      amount: 2400
+    - month: august
+      amount: 3400
