@@ -1,0 +1,24 @@
+#node01 ansible_host=node01 ansible_ssh_pass=caleston123
+#node02 ansible_host=node02 ansible_ssh_pass=caleston123
+#[web_nodes]
+#node01
+#node02
+
+
+---
+- name: 'Execute two commands on node01'
+  hosts: node01
+  become: yes
+  tasks:
+    - name: 'Execute a date command'
+      command: date
+    - name: 'Task to display hosts file on node01'
+      command: 'cat /etc/hosts'
+
+- name: 'Execute a command on node02'
+  hosts: node02
+  become: yes
+  tasks: 
+    - name: 'Task to display hosts file on node02'
+      command: 'cat /etc/hosts'
+
