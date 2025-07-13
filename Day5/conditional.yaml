@@ -1,0 +1,21 @@
+---
+-  name: 'Execute a script on all web server nodes'
+   hosts: all
+   become: yes
+   tasks:
+     -  service: 'name=nginx state=started'
+        when: inventory_hostname == 'node02'
+
+
+---
+- name: 'Am I an Adult or a Child?'
+  hosts: localhost
+  vars:
+    age: 25
+  tasks:
+    - name: I am a Child
+      command: 'echo "I am a Child"'
+      when: 'age < 18'
+    - name: I am an Adult
+      command: 'echo "I am an Adult"'
+      when: 'age >= 18'
