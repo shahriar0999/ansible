@@ -1,0 +1,20 @@
+---
+- name: 'hosts'
+  hosts: all
+  become: yes
+  tasks:
+    -  name: 'Execute a script'
+       script: /tmp/install_script.sh
+
+    - name: 'Start httpd service'
+      service:
+        name: 'httpd'
+        state: 'started'
+
+    - name: "Create or update index.html file."
+      lineinfile:
+        path: /var/www/html/index.html
+        line: "Welcome to ansible-beginning course"
+        create: true
+
+    
