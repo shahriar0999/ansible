@@ -1,0 +1,10 @@
+1. cd .ssh
+2. ls # we find **known_host** (save ssh key of remote host)
+3. ssh-keygen -H -F ubuntu1  (user name of the remote machine)
+4. ssh-keygen -H -F 172.168.8.0 (privet ip of the remote machine)
+5. first time when we connect to remote machine then it ask figer_print 
+    and we give yes then ssh key store inside the **known_host** file
+6. After second time when we connect to the remote machine 
+    then don't ask for **finger print** because ssh-key already present inside **known_host**
+
+7. If we remove those ssh-key from **known_host** then figner print again need to given
