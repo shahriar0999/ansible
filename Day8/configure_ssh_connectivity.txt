@@ -8,3 +8,6 @@
     then don't ask for **finger print** because ssh-key already present inside **known_host**
 
 7. If we remove those ssh-key from **known_host** then figner print again need to given
+8. generate ssh key **ssh-keygen**
+9. ssh-copy-id username@ip_address
+10. after doing this steps no need to give password when we login in the remote host..
