@@ -1,0 +1,2 @@
+[ec2]
+ec2-node-1 ansible_host=19.21.239.112
